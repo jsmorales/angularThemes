@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['nuevo']">Nuevo</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['edit']">Editar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['detail']">Detalle</a>
+  </li>
+</ul>
+
+<!-- router outlet de este componente segun las rutas -->
+<router-outlet></router-outlet>

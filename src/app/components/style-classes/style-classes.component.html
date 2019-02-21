@@ -1,0 +1,28 @@
+<hr>
+<div class="mt-3 mb-3">
+  <!-- [ngClass]="selecStylesAlert.value" -->
+  <div class="alert" role="alert" [ngClass]="selecStylesAlert.value">
+    A simple primary alert—check it out!
+  </div>
+  <select #selecStylesAlert (change)="changeStyle(selecStylesAlert.value)">
+    <option *ngFor="let style of alertStyles" value="{{style.style}}">{{style.name}}</option>
+  </select>
+  <hr>
+</div>
+
+<hr>
+<div class="mt-3 mb-3">
+  <!--[appResaltado]="{enterColor: 'orange', leaveColor: 'red', clickColor: 'blue'}"-->
+  <h1 [appResaltado]="{enterColor: 'orange', leaveColor: 'red', clickColor: 'blue'}">Proceso asíncrono</h1>
+  <button (click)="ejecutar()" [ngClass]="{'disabled':loading}" [disabled]="loading" class="btn btn-primary">
+    <p [ngClass]="{'fa-save':!loading, 'fa-sync fa-spin':loading}" class="fa"></p>
+    <span *ngIf="!loading"> Guardar Cambios</span>
+    <span *ngIf="loading"> Guardando...</span>
+  </button>
+  <hr>
+</div>
+
+<hr>
+
+<app-ng-switch></app-ng-switch>
+

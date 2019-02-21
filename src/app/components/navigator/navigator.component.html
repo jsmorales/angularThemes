@@ -1,0 +1,19 @@
+<ul class="nav nav-pills mb-3">
+  <li class="nav-item">
+    <!-- routerLinkActive directiva que define la clase cuando el link esta activo,  -->
+    <!-- [routerLink] recibe un array de strings que construye la ruta -->
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['home']">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['stylesClasses']">Styles Classes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['ngSwitch']">ngSwitch</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['ngStyle']">ngStyle</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="['user',10]">User</a>
+  </li>
+</ul>

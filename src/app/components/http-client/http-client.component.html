@@ -1,0 +1,24 @@
+<div *ngIf="!loading">
+  <p>Este ejemplo es tomado de: </p>
+  <a target="_blank" href="https://medium.com/codingthesmartway-com-blog/angular-4-3-httpclient-accessing-rest-web-services-with-angular-2305b8fd654b">Ir Al Sitio</a>
+
+  <div class="card mb-3" style="width: 18rem;">
+    <img [src]="img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{login}} <button class="btn btn-secondary" (click)="loadPerfilGitHub()"><i class="fa fa-sync"></i> Recargar</button> </h5>
+      <p class="card-text">{{data.name}}</p>
+      <p class="card-text">Creado: {{data.created_at | date: 'yyyy - MMM - dd'}}</p>
+      <p class="card-text">Ubicado: {{data.location | uppercase}}</p>
+      <p class="card-text">Cantidad de Repos pùblicos: {{data.public_repos}}</p>
+      <p><a [href]="data.repos_url" target="_blank">ver repositorios json</a></p>
+      <a [href]="data.html_url" target="_blank" class="btn btn-primary">ver perfil</a>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="loading">
+  <div class="alert alert-info" role="alert">
+    Cargando Perfil GitHub <i class="fa fa-sync fa-spin"></i>
+  </div>
+</div>
